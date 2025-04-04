@@ -110,9 +110,13 @@ document.addEventListener("DOMContentLoaded", async () => {
   instructionsMustAnswered.textContent = `${passThreshold} / ${questions.length} `;
 
   const startExamBtn = document.querySelector(".start-btn");
+
   startExamBtn.addEventListener("click", () => {
     window.location.href = "./pages/test-page.html";
   });
+
+
+  
   const printPdfBtn = document.querySelector(".printToPdfBtn");
   printPdfBtn.addEventListener("click", () => {
     const passThreshold = Math.ceil(
