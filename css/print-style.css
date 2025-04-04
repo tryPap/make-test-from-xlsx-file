@@ -1,0 +1,134 @@
+/* print-style.css */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 25px;
+  color: #333;
+  position: relative;
+}
+
+/* Top-right corner for "Printable Exam" */
+.print-title {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* Bottom-left corner for the timestamp */
+.timestamp {
+  position: fixed;  /* Fixed to always stay in place */
+  bottom: 10px;
+  right: 10px;
+  font-size: 12px;
+  color: #666;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#school-name {
+  margin:0;
+  font-size: 12px;
+  color: #666;
+}
+
+.logo {
+  width: 18px;
+  height: 18px;
+  margin: 0px 5px 0px 0px;
+}
+/* Exam Info */
+.exam-title {
+  font-size: 14x;
+  font-weight: 500; 
+  padding: 0;
+  text-align: center;
+  line-height: 17px;
+}
+.exam-info {
+  line-height: 22px;
+  font-size: 14px;
+  margin-bottom: 5px;
+  padding: 8px 0px;
+}
+
+.full-exam-name {
+  margin-bottom: 1px;
+  border: 1px solid #666;
+  padding: 0px 8px 0px 8px;
+  font-size: 14px;
+  background-color: #ebebeb;
+}
+
+.exam-questions {
+  padding: 20px;
+  border: 1px solid #666;
+}
+/* Questions Layout */
+.question {
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.question h2 {
+  font-size: 16px; /* Smaller question font */
+  margin: 0;
+}
+.question-meta {
+  line-height: 0px;
+  display: flex;
+  gap: 10px;
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
+}
+.answers label {
+  display: block;
+  margin-left: 15px;
+  font-size: 14px;
+}
+
+.print-btn {
+  padding: 10px;
+
+}
+@page {
+  size: A4;
+  margin-top: 0mm;
+  counter-increment: page;
+  padding: 25px;
+
+}
+@page:right {
+  @bottom-right {
+    content: "Page " counter(page);
+  }
+}
+
+@page:left {
+  @bottom-right {
+    content: "Page " counter(page);
+  }
+}
+.footer {
+  display: block;
+  text-align: right;
+  font-size: 12px;
+  color: #333;
+}
+
+
+@media print {
+  .footer {
+    position: running(footer);
+  }
+  
+  .print-btn {
+    visibility: hidden;
+  }
+
+}

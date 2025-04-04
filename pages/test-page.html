@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DemoCertExams</title>
+    <!-- Add to HTML head -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/test-page.css" />
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"
+    ></script>
+    <script src="../js/retrieve-data.js"></script>
+    <script src="../js/shuffle-questions.js"></script>
+    <script defer src="../js/test-page.js"></script>
+  </head>
+  <body>
+    <nav>
+      <h1 class="header"><a href="/index.html">DemoCert</a></h1>
+      <div class="timer-container">
+        <span id="timer">00:00</span>
+      </div>
+    </nav>
+
+    <div class="main">
+      <div class="quests">
+        <div class="question-meta"></div>
+        <div class="question-answers"></div>
+      </div>
+    </div>
+  </body>
+</html>

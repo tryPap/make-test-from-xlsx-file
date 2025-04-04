@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DemoCertExams</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/exam-details.css" />
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <script src="../js/shuffle-questions.js"></script>
+    <script src="../js/retrieve-data.js"></script>
+    <script defer  src="../js/exam-details.js"></script>
+  </head>
+  <body>
+    <nav>
+      <h1 class="header"><a href="../index.html">DemoCert</a></h1>
+    </nav>
+    <div class="main">
+      <div class="exam-info">
+        <div class="exam-details">
+          <h2>Χειριστής Κλαρκ</h2>
+          <p><strong>Τίτλος: </strong><span id="exam-name"></span></p>
+          <p><strong>Ημερομηνία: </strong><span id="exam-date"></span></p>
+          <p><strong>Ώρα Εξέτασης: </strong><span id="exam-time"></span></p>
+          <p><strong>Διάρκεια: </strong><span id="exam-duration">10</span> λεπτά.</p> 
+        </div>
+        <div class="questions-details">
+          <h2>Ποσοστά Δυσκολίας</h2>
+          <p><strong>Ερωτήσεις: </strong><span id="total-questions"></span></p>
+          <p><strong>Δυσκολία Α: </strong><span id="difficulty-a"></span>%</p>
+          <p><strong>Δυσκολία Β: </strong><span id="difficulty-b"></span>%</p>
+          <p><strong>Δυσκολία Γ: </strong><span id="difficulty-c"></span>%</p>
+          <p><strong>Ποσοστό Επιτυχίας: </strong><span id="pass-percent"></span >%</p> 
+          <button id="openModalBtn">Change</button>
+        </div> 
+        <div class="instructions">
+          <h2>Οδηγίες Εξέτασης</h2>
+          <p>Πρόγραμμα Επαγγελματικής Κατάρτισης Χειριστής Clark για την άσκηση της δραστηριότητας του χειρισμού ανυψωτικών περονοφόρων μηχανημάτων έργων που κατατάσσονται στην "ειδικότητα 2" (εργασίες ανύψωσης και μεταφοράς φορτίων ή προσώπων).</p>
+          <p>Απαντάτε σε όλες τις ερωτήσεις κυκλόνωντας την σωστή απάντηση.</p>
+          <p>Το ποσοστό επιτυχίας είναι <span id="instructions-pass-percentage">80%</span>, <span id="instructions-must-answered">48 / 60 </span>σωστές απαντήσεις. Καλή Επιτυχία!</p>
+          <!-- <a class="start-btn" href="../pages/test-page.html">Start</a> -->
+          <button class="start-btn">Start</button>
+          <button class="printToPdfBtn">Print PDF</button> 
+        </div>   
+      </div>
+    <!-- Modal -->
+    <div id="darkModal" class="modal">
+      <div class="modal-content">
+          <span class="close-btn">&times;</span>
+          <h2>Change Percentages</h2>
+          <div class="modal-body">
+            <div class="input-group">
+              <label for="total-questions-input">Συνολικές Ερωτήσεις</label>
+              <input type="number" id="total-questions-input" name="total-questions" min="0" max="100" placeholder="%">
+            </div>
+          <div class="input-group">
+              <label for="difficulty-a-input">Δυσκολία Α</label>
+              <input type="number" id="difficulty-a-input" name="difficulty-a" min="0" max="100" placeholder="%">
+          </div>
+          <div class="input-group">
+              <label for="difficulty-b-input">Δυσκολία Β</label>
+              <input type="number" id="difficulty-b-input" name="difficulty-b" min="0" max="100" placeholder="%">
+          </div>
+          <div class="input-group">
+              <label for="difficulty-c-input">Δυσκολία Γ</label>
+              <input type="number" id="difficulty-c-input" name="difficulty-c" min="0" max="100"placeholder="%" >
+          </div>
+          <div class="input-group">
+              <label for="pass-percent-input">Ποσοστό Επιτυχίας</label>
+              <input type="number" id="pass-percent-input" name="pass-percent" min="0" max="100" placeholder="%">
+          </div>
+            </div>
+          <button type="submit" id="saveBtn">Save</button>
+      </div>
+  </div>
+      <!-- <div class="instructions">
+        <h2>Οδηγίες Εξέτασης</h2>
+        <p>Πρόγραμμα Επαγγελματικής Κατάρτισης Χειριστής Clark για την άσκηση της δραστηριότητας του χειρισμού ανυψωτικών περονοφόρων μηχανημάτων έργων που κατατάσσονται στην "ειδικότητα 2" (εργασίες ανύψωσης και μεταφοράς φορτίων ή προσώπων).</p>
+        <p>Απαντάτε σε όλες τις ερωτήσεις κυκλόνωντας την σωστή απάντηση.</p>
+        <p>Το ποσοστό επιτυχίας είναι <span id="instructions-pass-percentage">80%</span>, <span id="instructions-must-answered">48 / 60 </span>σωστές απαντήσεις. Καλή Επιτυχία!</p>
+        <a class="start-btn" href="../pages/test-page.html">Start</a>
+        <button class="printToPdfBtn">Print PDF</button> 
+      </div> -->
+      </div>
+      </div>
+    </div>
+  </body>
+</html>
