@@ -23,6 +23,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // Redirect to the details page with parameters
-    window.location.href = `../pages/exam-details.html?${queryParams.toString()}`;
+    window.location.href = `exam-details.html?${queryParams.toString()}`;
   });
 });

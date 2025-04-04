@@ -112,7 +112,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   const startExamBtn = document.querySelector(".start-btn");
 
   startExamBtn.addEventListener("click", () => {
-    window.location.href = "../pages/test-page.html";
+    window.location.href = "test-page.html";
   });
 
 
