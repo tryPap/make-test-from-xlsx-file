@@ -112,11 +112,11 @@ document.addEventListener("DOMContentLoaded", async () => {
   const startExamBtn = document.querySelector(".start-btn");
 
   startExamBtn.addEventListener("click", () => {
-    window.location.href = "./pages/test-page.html";
+    window.location.href = "../pages/test-page.html";
   });
 
 
-  
+
   const printPdfBtn = document.querySelector(".printToPdfBtn");
   printPdfBtn.addEventListener("click", () => {
     const passThreshold = Math.ceil(
