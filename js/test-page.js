@@ -58,13 +58,23 @@ document.addEventListener("DOMContentLoaded", async () => {
     timerElement.classList.toggle("low-time", timeLeft <= 5 * 60);
   }
 
-  // Shuffle array function
-  function shuffleArray(array) {
-    for (let i = array.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [array[i], array[j]] = [array[j], array[i]];
+  function scrollToNextQuestion() {
+    const questionBlocks = document.querySelectorAll(".question-block");
+    const currentQuestion = document.activeElement.closest(".question-block");
+  
+    // Find the index of the current question
+    const currentIndex = Array.from(questionBlocks).indexOf(currentQuestion);
+  
+    // Scroll to the next question if it exists
+    if (currentIndex >= 0 && currentIndex < questionBlocks.length - 1) {
+      const nextQuestion = questionBlocks[currentIndex + 1];
+      nextQuestion.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+      });
     }
   }
+    
 
   function startTestFunc() {
     quests.style.display = "block";
@@ -101,7 +111,6 @@ document.addEventListener("DOMContentLoaded", async () => {
       let shuffledAnswers = [...question.possibleAnswers].filter(
         (answer) => answer.trim() !== ""
       );
-      shuffleArray(shuffledAnswers);
 
       shuffledAnswers.forEach((answer) => {
         const label = document.createElement("label");
@@ -113,6 +122,11 @@ document.addEventListener("DOMContentLoaded", async () => {
         input.value = answer;
         input.dataset.correct =
           answer === question.correctAnswer ? "true" : "false";
+
+
+          input.addEventListener("change", () => {
+            scrollToNextQuestion();
+          });
 
         label.appendChild(input);
         label.append(` ${answer}`);

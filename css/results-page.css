@@ -7,23 +7,23 @@ html,body {
 }
 
 body {
-  font-family: 'Roboto', Arial, sans-serif;
-  background: #0f172a;
+  font-family: "Roboto", Arial, sans-serif;
+  background: url(../assets/images/background2.jpg) no-repeat center center fixed;
+  background-size: cover;
+  backdrop-filter: blur(5px);
   color: #e2e8f0;
   min-height: 100vh;
 }
 
 /* Navigation Bar */
 nav {
-  background: rgba(15, 23, 42, 0.95);
+  background-color: rgba(0, 0, 0, 0.9);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   display: flex;
-  /* background-color: rgba(0, 0, 0, 0.9); */
-  /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); */
   padding: 20px;
   text-align: left;
   justify-content: space-between;
@@ -57,8 +57,8 @@ nav {
 .container {
     max-width: 1000px;    
     margin: 0 auto;
-    /* background: rgba(0, 0, 0, 0.9); */
-    background: rgba(30, 41, 59, 0.8);
+    background: rgba(0, 0, 0, 0.9);
+    /* background: rgba(30, 41, 59, 0.8); */
     padding: 25px;
     border-radius: 8px;
     backdrop-filter: blur(10px);
@@ -72,7 +72,7 @@ nav {
 }
 
 .result-title{ text-align: center; }
-.result-title.passed { color: #10b285; }
+.result-title.passed { color: #03e063; }
 .result-title.failed { color: #ef4444; }
 
 .correct-answers details {
