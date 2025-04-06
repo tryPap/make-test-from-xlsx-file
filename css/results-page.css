@@ -146,4 +146,8 @@ nav {
     background: linear-gradient(195deg,#13797e, #1caab2); 
   }
 
-  
+  @media (max-width: 768px) { 
+    #results-container {
+      grid-template-columns: 1fr;
+    }
+  }

@@ -6,7 +6,7 @@ You can customize the test structure, choose how many questions to include, and 
 
 ## 🚀 Features
 
-- 📥 Import questions from `.xlsx` files
+- 📥 I import questions from `.xlsx` file
 - 🎯 Select how many questions to include in the test
 - 📊 Adjust question type percentages (e.g., multiple choice vs written)
 - 🖨️ Print the test for offline use

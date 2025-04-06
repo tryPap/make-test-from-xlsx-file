@@ -100,7 +100,8 @@ nav h1 a:hover {
 
 .question-block h3 {
   margin-bottom: 10px;
-  color: #00f2ff;
+  font-size: 18px;
+  color: #94b5d5;
 }
 
 /* Answer Options */
@@ -158,7 +159,7 @@ nav h1 a:hover {
   nav {
     padding: 15px;
   }
-  
+
   nav h1 a {
     font-size: 20px;
   }
@@ -180,7 +181,7 @@ nav h1 a:hover {
   #results-container {
     grid-template-columns: 1fr;
   }
-  
+
   .quests {
     padding: 15px;
   }
