@@ -261,3 +261,9 @@ label {
     margin: 10vh 2vh;
   }
 }
+@media (max-width: 480px) {
+  .exam-info {
+    grid-template-columns: 1fr;
+
+  }
+}
