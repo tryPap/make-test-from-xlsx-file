@@ -78,4 +78,9 @@ button:focus {
   button {
     display: none;
   }
+  @media (max-width: 480px) {
+    body {
+      padding-bottom: 40px;
+    }
+    
 }

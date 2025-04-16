@@ -202,5 +202,6 @@ nav h1 a:hover {
   .main {
     margin-top: 50px;
     height: calc(100vh - 90px);
+    padding-bottom: 40px;
   }
 }

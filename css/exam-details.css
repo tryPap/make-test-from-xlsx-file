@@ -245,6 +245,7 @@ label {
 @media (max-width: 768px) {
   .main {
     margin: 10px auto;
+    padding-bottom: 40px;
   }
 
   .exam-info {
@@ -253,5 +254,8 @@ label {
   }
   .instructions {
     max-width: 100%;
+  }
+  .modal-content {
+    margin: 10vh 2vh;
   }
 }
