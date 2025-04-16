@@ -58,7 +58,6 @@ nav {
     max-width: 1000px;    
     margin: 0 auto;
     background: rgba(0, 0, 0, 0.9);
-    /* background: rgba(30, 41, 59, 0.8); */
     padding: 25px;
     border-radius: 8px;
     backdrop-filter: blur(10px);
@@ -97,7 +96,6 @@ nav {
     margin-right: 3px;
     padding: 12px 18px;
     font-size: 16px;
-    background: linear-gradient(135deg, #ff5722, #d84315);
     border: none;
     border-radius: 6px;
     color: white;
@@ -115,12 +113,11 @@ nav {
     transform: translateY(3px);
   }
   
-  .printBtn {
+  .printBtn {   
     margin-top: 15px;
     margin-left: 3px;
     padding: 12px 18px;
     font-size: 16px;
-    background: linear-gradient(135deg, #ff5722, #d84315);
     border: none;
     border-radius: 6px;
     color: white;
@@ -150,9 +147,15 @@ nav {
     #results-container {
       grid-template-columns: 1fr;
     }
+    .buttons-div {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
   }
   @media (max-width: 480px) { 
-    .main {
-      padding-bottom: 40px;
+    .container {
+      padding-top: 40px;
+      padding-bottom: 50px;
     }
   } 

@@ -184,6 +184,8 @@ nav h1 a:hover {
 
   .quests {
     padding: 15px;
+    padding-top: 40px;
+    padding-bottom: 50px;
   }
 }
 
@@ -202,6 +204,5 @@ nav h1 a:hover {
   .main {
     margin-top: 50px;
     height: calc(100vh - 90px);
-    padding-bottom: 40px;
   }
 }

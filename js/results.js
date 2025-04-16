@@ -98,6 +98,10 @@ function displayResults(resultsData) {
   resultsContainer.appendChild(correctAnswersDiv);
   resultsContainer.appendChild(wrongAnswersDiv);
 
+  const buttonsDiv = document.createElement("div");
+  buttonsDiv.classList.add("buttons-div");
+  container.appendChild(buttonsDiv);
+  
   // Restart button
   const restartButton = document.createElement("button");
   restartButton.classList.add("btn", "restart");
@@ -113,8 +117,8 @@ function displayResults(resultsData) {
   printButton.addEventListener("click", printResults);
 
   // Append buttons to results container
-  container.appendChild(restartButton);
-  container.appendChild(printButton);
+  buttonsDiv.appendChild(restartButton);
+  buttonsDiv.appendChild(printButton);
 }
 
 // Print Results

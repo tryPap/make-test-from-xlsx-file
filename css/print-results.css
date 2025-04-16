@@ -34,7 +34,7 @@ h2 {
 
 button {
   position: fixed;
-  bottom: 2%;
+  bottom: 3%;
   left: 2%;
   padding: 12px 24px;
   background-color: #007bff; /* A nice blue color */
@@ -78,9 +78,11 @@ button:focus {
   button {
     display: none;
   }
+}
   @media (max-width: 480px) {
-    body {
-      padding-bottom: 40px;
+    .results {
+      padding-top: 40px;
+      padding-bottom: 50px;
     }
     
 }

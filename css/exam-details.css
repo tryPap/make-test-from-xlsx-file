@@ -244,13 +244,14 @@ label {
 /* Responsive Design */
 @media (max-width: 768px) {
   .main {
-    margin: 10px auto;
-    padding-bottom: 40px;
+    margin: 10px auto; 
   }
 
   .exam-info {
     margin-top: 3rem;
     grid-template-columns: 1fr;
+    padding-top : 40px;
+    padding-bottom : 40px;
   }
   .instructions {
     max-width: 100%;
