@@ -48,7 +48,8 @@ nav h1 a:hover {
 /* Main Container */
 .main {
   margin-top: 70px;
-  height: calc(100vh - 140px);
+  /* height: calc(100vh - 140px); */
+  height: calc(100vh - 150px);
   overflow-y: auto;
   padding: 35px;
   scroll-behavior: smooth;
